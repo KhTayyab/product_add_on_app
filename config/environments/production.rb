@@ -61,27 +61,6 @@ Rails.application.configure do
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
 
-  config.action_mailer.default_url_options  = { :host => 'alchemative.net' }
-  config.action_mailer.delivery_method      = :smtp
-
-  config.action_mailer.smtp_settings = {
-    address:              'bentley.websitewelcome.com',
-    port:                 25,
-    domain:               'bentley.websitewelcome.com',
-    user_name:            'dev@alchemative.net',
-    password:             'avaya@1209',
-    authentication:       'plain',
-    enable_starttls_auto: true
-  }
-
-  Rails.application.config.middleware.use ExceptionNotification::Rack,
-  :email => {
-    :deliver_with => :deliver, # Rails >= 4.2.1 do not need this option since it defaults to :deliver_now
-    :email_prefix => "Simply Product Add On Shopify App",
-    :sender_address => %{"Simply Product Add On Shopify App Exception" <dev@alchemative.net>},
-    :exception_recipients => %w{khawajatayyab@icloud.com}
-  }
-
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
   config.i18n.fallbacks = true
