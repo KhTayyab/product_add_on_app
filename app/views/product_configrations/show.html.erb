@@ -1,0 +1,81 @@
+<% content_for :javascript do %>
+  <script type="text/javascript">
+     ShopifyApp.ready(function(){
+       ShopifyApp.Bar.initialize({ title: "Product Customization" });
+     });
+  </script>
+<% end %>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Product name:</strong>
+  <%= @product_configration.product_name %>
+</p>
+
+<p>
+  <strong>Product sku:</strong>
+  <%= @product_configration.product_sku %>
+</p>
+
+<p>
+  <strong>Option count:</strong>
+  <%= @product_configration.option_count %>
+</p>
+
+<p>
+  <strong>Shop name:</strong>
+  <%= @product_configration.shop_name %>
+</p>
+
+<p>
+  <strong>Option1:</strong>
+  <%= @product_configration.option1 %>
+</p>
+
+<p>
+  <strong>Option2:</strong>
+  <%= @product_configration.option2 %>
+</p>
+
+<p>
+  <strong>Option3:</strong>
+  <%= @product_configration.option3 %>
+</p>
+
+<p>
+  <strong>Option4:</strong>
+  <%= @product_configration.option4 %>
+</p>
+
+<p>
+  <strong>Option5:</strong>
+  <%= @product_configration.option5 %>
+</p>
+
+<p>
+  <strong>Option6:</strong>
+  <%= @product_configration.option6 %>
+</p>
+
+<p>
+  <strong>Option7:</strong>
+  <%= @product_configration.option7 %>
+</p>
+
+<p>
+  <strong>Option8:</strong>
+  <%= @product_configration.option8 %>
+</p>
+
+<p>
+  <strong>Option9:</strong>
+  <%= @product_configration.option9 %>
+</p>
+
+<p>
+  <strong>Option10:</strong>
+  <%= @product_configration.option10 %>
+</p>
+
+<%= link_to 'Edit', edit_product_configration_path(@product_configration) %> |
+<%= link_to 'Back', product_configrations_path %>

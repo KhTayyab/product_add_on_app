@@ -1,0 +1,291 @@
+<%= form_for(product_configration) do |f| %>
+  <% if product_configration.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(product_configration.errors.count, "error") %> prohibited this product_configration from being saved:</h2>
+
+      <ul>
+      <% product_configration.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="col-sm-12">
+    <div class="col-sm-6">
+      <div class="form-group">
+        <%= f.label :product_name, "Product Name" %>
+        <%= f.text_field :product_name, :class => 'form-control' %>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="form-group">
+        <%= f.label :product_sku, "Product SKU" %>
+        <%= f.text_field :product_sku, :class => 'form-control' %>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-12">
+    <div class="col-sm-6">
+      <div class="form-group">
+        <%= f.label :option_count, "No of Option" %>
+        <%= f.number_field :option_count, :class => 'form-control', :id => "option_count", max: 10, min:0 %>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-12" style="display:none;">
+    <div class="col-sm-6">
+      <div class="form-group">
+        <%= f.label :shop_name %>
+        <%= f.text_field :shop_name, :class => 'form-control', :value => params[:shop]  %>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-sm-12">
+    <div class="col-sm-6 option1" style="display:none;">
+      <div class="form-group">
+        <%= f.label :option1, "Option 1" %>
+        <%= f.text_field :option1, :class => 'form-control' %>
+      </div>
+    </div>
+    <div class="col-sm-6 option2" style="display:none;">
+      <div class="form-group">
+        <%= f.label :option2, "Option 2" %>
+        <%= f.text_field :option2, :class => 'form-control' %>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-12">
+    <div class="col-sm-6 option3"  style="display:none;">
+      <div class="form-group">
+        <%= f.label :option3, "Option 3" %>
+        <%= f.text_field :option3, :class => 'form-control' %>
+      </div>
+    </div>
+    <div class="col-sm-6 option4"  style="display:none;">
+      <div class="form-group">
+        <%= f.label :option4, "Option 4" %>
+        <%= f.text_field :option4, :class => 'form-control' %>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-12">
+    <div class="col-sm-6 option5"  style="display:none;">
+      <div class="form-group">
+        <%= f.label :option5, "Option 5" %>
+        <%= f.text_field :option5, :class => 'form-control' %>
+      </div>
+    </div>
+    <div class="col-sm-6 option6"  style="display:none;">
+      <div class="form-group">
+        <%= f.label :option6, "Option 6" %>
+        <%= f.text_field :option6, :class => 'form-control' %>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-12">
+    <div class="col-sm-6 option7"  style="display:none;">
+      <div class="form-group">
+        <%= f.label :option7, "Option 7" %>
+        <%= f.text_field :option7, :class => 'form-control' %>
+      </div>
+    </div>
+    <div class="col-sm-6 option8"  style="display:none;">
+      <div class="form-group">
+        <%= f.label :option8, "Option 8" %>
+        <%= f.text_field :option8, :class => 'form-control' %>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-12">
+    <div class="col-sm-6 option9"  style="display:none;">
+      <div class="form-group">
+        <%= f.label :option9, "Option 9" %>
+        <%= f.text_field :option9, :class => 'form-control' %>
+      </div>
+    </div>
+    <div class="col-sm-6 option10"  style="display:none;">
+      <div class="form-group">
+        <%= f.label :option10, "Option 10" %>
+        <%= f.text_field :option10, :class => 'form-control' %>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-12">
+    <div class="col-sm-6">
+      <div class="form-group">
+        <%= f.submit :class => "btn btn-primary", :value => "Save Customization" %>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+
+<script type="text/javascript">
+  $('#option_count').on('change', function(e) {
+    e.preventDefault();
+    e.stopPropagation(); 
+    if ($('#option_count').val() == '1')
+    {
+      $('.option1').show();
+      $('.option2').hide();
+      $('.option3').hide();
+      $('.option4').hide();
+      $('.option5').hide();
+      $('.option6').hide();
+      $('.option7').hide();
+      $('.option8').hide();
+      $('.option9').hide();
+      $('.option10').hide();
+    }
+
+    else if ($('#option_count').val() == '2')
+    {
+      $('.option1').show();
+      $('.option2').show();
+      $('.option3').hide();
+      $('.option4').hide();
+      $('.option5').hide();
+      $('.option6').hide();
+      $('.option7').hide();
+      $('.option8').hide();
+      $('.option9').hide();
+      $('.option10').hide();
+    }
+
+    else if ($('#option_count').val() == '3')
+    {
+      $('.option1').show();
+      $('.option2').show();
+      $('.option3').show();
+      $('.option4').hide();
+      $('.option5').hide();
+      $('.option6').hide();
+      $('.option7').hide();
+      $('.option8').hide();
+      $('.option9').hide();
+      $('.option10').hide();
+    }
+
+    else if ($('#option_count').val() == '4')
+    {
+      $('.option1').show();
+      $('.option2').show();
+      $('.option3').show();
+      $('.option4').show();
+      $('.option5').hide();
+      $('.option6').hide();
+      $('.option7').hide();
+      $('.option8').hide();
+      $('.option9').hide();
+      $('.option10').hide();
+    }
+
+    else if ($('#option_count').val() == '5')
+    {
+      $('.option1').show();
+      $('.option2').show();
+      $('.option3').show();
+      $('.option4').show();
+      $('.option5').show();
+      $('.option6').hide();
+      $('.option7').hide();
+      $('.option8').hide();
+      $('.option9').hide();
+      $('.option10').hide();
+    }
+
+    else if ($('#option_count').val() == '6')
+    {
+      $('.option1').show();
+      $('.option2').show();
+      $('.option3').show();
+      $('.option4').show();
+      $('.option5').show();
+      $('.option6').show();
+      $('.option7').hide();
+      $('.option8').hide();
+      $('.option9').hide();
+      $('.option10').hide();
+    }
+
+    else if ($('#option_count').val() == '7')
+    {
+      $('.option1').show();
+      $('.option2').show();
+      $('.option3').show();
+      $('.option4').show();
+      $('.option5').show();
+      $('.option6').show();
+      $('.option7').show();
+      $('.option8').hide();
+      $('.option9').hide();
+      $('.option10').hide();
+    }
+
+    else if ($('#option_count').val() == '8')
+    {
+      $('.option1').show();
+      $('.option2').show();
+      $('.option3').show();
+      $('.option4').show();
+      $('.option5').show();
+      $('.option6').show();
+      $('.option7').show();
+      $('.option8').show();
+      $('.option9').hide();
+      $('.option10').hide();
+    }
+
+    else if ($('#option_count').val() == '9')
+    {
+      $('.option1').show();
+      $('.option2').show();
+      $('.option3').show();
+      $('.option4').show();
+      $('.option5').show();
+      $('.option6').show();
+      $('.option7').show();
+      $('.option8').show();
+      $('.option9').show();
+      $('.option10').hide();
+    }
+
+    else if ($('#option_count').val() == '10')
+    {
+      $('.option1').show();
+      $('.option2').show();
+      $('.option3').show();
+      $('.option4').show();
+      $('.option5').show();
+      $('.option6').show();
+      $('.option7').show();
+      $('.option8').show();
+      $('.option9').show();
+      $('.option10').show();
+    }
+
+    else
+    {
+      $('.option1').hide();
+      $('.option2').hide();
+      $('.option3').hide();
+      $('.option4').hide();
+      $('.option5').hide();
+      $('.option6').hide();
+      $('.option7').hide();
+      $('.option8').hide();
+      $('.option9').hide();
+      $('.option10').hide();
+    };
+
+  });
+</script>

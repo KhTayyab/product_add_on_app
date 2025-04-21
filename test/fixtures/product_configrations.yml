@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  product_name: MyString
+  product_sku: MyString
+  option_count: MyString
+  shop_name: MyString
+  option1: MyString
+  option2: MyString
+  option3: MyString
+  option4: MyString
+  option5: MyString
+  option6: MyString
+  option7: MyString
+  option8: MyString
+  option9: MyString
+  option10: MyString
+
+two:
+  product_name: MyString
+  product_sku: MyString
+  option_count: MyString
+  shop_name: MyString
+  option1: MyString
+  option2: MyString
+  option3: MyString
+  option4: MyString
+  option5: MyString
+  option6: MyString
+  option7: MyString
+  option8: MyString
+  option9: MyString
+  option10: MyString
